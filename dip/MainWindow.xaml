@@ -1,0 +1,18 @@
+﻿<Window x:Class="dip.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:dip"
+        mc:Ignorable="d"
+        Title="Войти" Height="259" Width="395" MaxHeight="259" MaxWidth="395" MinHeight="259" MinWidth="395">
+    <Grid>
+        <Button x:Name="Reg" Content="Зарегистрироваться" HorizontalAlignment="Left" Margin="208,153,0,0" VerticalAlignment="Top" Width="153" Height="55" Click="Reg_Click"/>
+        <Button x:Name="LogIn" Content="Войти" HorizontalAlignment="left" Margin="28,153,0,0" VerticalAlignment="top" Width="161" Height="55" Click="LogIn_Click"/>
+        <Label Content="Пароль" HorizontalAlignment="Left" Margin="28,87,0,0" VerticalAlignment="Top" Height="40" Width="87" FontSize="20"/>
+        <TextBox x:Name="Password" HorizontalAlignment="Left" Height="41" Margin="124,86,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="237" FontSize="20"/>
+        <Label Content="Логин" HorizontalAlignment="Left" Margin="28,25,0,0" VerticalAlignment="Top" Height="40" Width="87" FontSize="20"/>
+        <TextBox x:Name="Log" HorizontalAlignment="Left" Height="41" Margin="124,27,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="237" FontSize="20"/>
+
+    </Grid>
+</Window>
