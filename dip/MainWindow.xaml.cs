@@ -38,7 +38,7 @@ namespace dip
                 if (x.Trim() == "Администратор")
                 {
 
-                    WorkWin f = new WorkWin();
+                    DispatcherTimerSample f = new DispatcherTimerSample();
                     this.Hide();
                     f.ShowDialog();
                     this.Close();
