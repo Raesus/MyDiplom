@@ -23,5 +23,40 @@ namespace dip
         {
             InitializeComponent();
         }
+
+        private void Exp1_Collapsed(object sender, RoutedEventArgs e)
+        {
+            Grid.Height = 323;
+        }
+
+        private void Exp1_Expanded(object sender, RoutedEventArgs e)
+        {
+            Exp2.IsExpanded = false;
+            Grid.Height = 240;
+        }
+
+        private void Exp2_Collapsed(object sender, RoutedEventArgs e)
+        {
+            Grid.Height = 323;
+        }
+
+        private void Exp2_Expanded(object sender, RoutedEventArgs e)
+        {
+            Exp1.IsExpanded = false;
+            Grid.Height = 295;
+        }
+
+        private void Change_Click(object sender, RoutedEventArgs e)
+        {
+            this.Hide();
+            MainWindow f = new MainWindow();
+            f.ShowDialog();
+            this.Close();
+        }
+
+        private void Exit_Click(object sender, RoutedEventArgs e)
+        {
+            System.Windows.Application.Current.Shutdown();
+        }
     }
 }

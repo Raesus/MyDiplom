@@ -5,8 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:dip"
         mc:Ignorable="d"
-        Title="WorkWin" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="WorkWin" Height="402" Width="799">
+    <StackPanel  HorizontalAlignment="Left" Width="102" Margin="0,0,0,2">
+        <Expander x:Name="Exp1" Header="Профиль" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Background="#FFC0FFF1" BorderBrush="Black" Collapsed="Exp1_Collapsed" Expanded="Exp1_Expanded"  >
+            <StackPanel Height="83" >
+                <Button x:Name="Prof" Content="Мой профиль" Height="28" Width="99" Background="#FFC0FFF1" BorderBrush="#FFC0FFF1" Foreground="Black"/>
+                <Button x:Name="Smena" Content="Смена" Height="28" Width="99" Background="#FFC0FFF1" BorderBrush="#FFC0FFF1" Foreground="Black"/>
+                <Button x:Name="Zapis" Content="Запись" Height="28" Background="#FFC0FFF1" BorderBrush="#FFC0FFF1" Foreground="Black"/>
+            </StackPanel>
+        </Expander>
+        <Expander x:Name="Exp2" Header="Статистика" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Background="#FFC0FFF1" BorderBrush="Black" Margin="0,0,0,0" Collapsed="Exp2_Collapsed" Expanded="Exp2_Expanded">
+            <StackPanel>
+                <Button x:Name="Chas" Content="Часы" Height="23" Background="#FFC0FFF1" BorderBrush="#FFC0FFF1" Foreground="Black"/>
+                <Button x:Name="Stat" Content="Стат" Height="23" Background="#FFC0FFF1" BorderBrush="#FFC0FFF1" Foreground="Black"/>
+            </StackPanel>
+
+        </Expander>
+        <Grid x:Name="Grid" Height="323">
+            <Button x:Name="Change" Content="Сменить" Background="#FFC0FFF1" BorderBrush="Black" VerticalAlignment="Bottom" Margin="0,0,2,25" HorizontalContentAlignment="Center" Click="Change_Click"/>
+        <Button x:Name="Exit" Content="Выход" Background="#FFC0FFF1" BorderBrush="Black" VerticalAlignment="Bottom" Margin="0,0,2,3" Click="Exit_Click"/>
+            </Grid>
+    </StackPanel>
 </Window>

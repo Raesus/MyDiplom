@@ -17,3 +17,5 @@ C:\Users\krai\Desktop\dip\dip\obj\Debug\dip.csproj.GenerateResource.cache
 C:\Users\krai\Desktop\dip\dip\obj\Debug\dip.csproj.CoreCompileInputs.cache
 C:\Users\krai\Desktop\dip\dip\obj\Debug\dip.exe
 C:\Users\krai\Desktop\dip\dip\obj\Debug\dip.pdb
+C:\Users\krai\Desktop\dip\dip\obj\Debug\MainWork.g.cs
+C:\Users\krai\Desktop\dip\dip\obj\Debug\MainWork.baml

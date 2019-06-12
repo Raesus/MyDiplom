@@ -30,8 +30,9 @@ namespace dip
         {
             try
             {
+                
                 SqlConnection con = new SqlConnection(@"Data Source=KRAI-ПК\SQLEXPRESS;Initial Catalog=Diplom;User ID=sa;Password=1234");
-                SqlCommand cmd = new SqlCommand("SELECT Role FROM [User] WHERE Login='" + Log.Text + "' AND Psswrd='" + Password.Text + "'", con);
+                SqlCommand cmd = new SqlCommand("SELECT Role FROM [User] WHERE Login='" + Log.Text + "' AND Psswrd='" + Password.Password + "'", con);
                 con.Open();
                 string x = cmd.ExecuteScalar().ToString();
                 if (x.Trim() == "Администратор")
@@ -50,7 +51,7 @@ namespace dip
                     this.Close();
                 }
                 User.Login = Log.Text;
-                User.pass = Password.Text;
+                User.pass = Password.Password.ToString();
                 con.Close();
             }
 
