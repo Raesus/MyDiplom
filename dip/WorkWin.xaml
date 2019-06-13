@@ -5,13 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:dip"
         mc:Ignorable="d"
-        Title="WorkWin" Height="402" Width="799">
+        Title="WorkWin" Height="402" Width="799" MaxHeight="402" MaxWidth="799" MinHeight="402" MinWidth="799">
     <Grid Margin="0,0,2,0">
         <StackPanel  HorizontalAlignment="Left" Width="102" Margin="0,0,0,2">
             <Expander x:Name="Exp1" Header="Профиль" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Background="#FFC0FFF1" BorderBrush="Black" Collapsed="Exp1_Collapsed" Expanded="Exp1_Expanded"  >
                 <StackPanel Height="83" >
-                    <Button x:Name="Prof" Content="Мой профиль" Height="28" Width="99" Background="#FFC0FFF1" BorderBrush="#FFC0FFF1" Foreground="Black"/>
-                    <Button x:Name="Smena" Content="Смена" Height="28" Width="99" Background="#FFC0FFF1" BorderBrush="#FFC0FFF1" Foreground="Black"/>
+                    <Button x:Name="Prof" Content="Мой профиль" Height="28" Width="99" Background="#FFC0FFF1" BorderBrush="#FFC0FFF1" Foreground="Black" Click="Prof_Click"/>
+                    <Button x:Name="Smena" Content="Смена" Height="28" Width="99" Background="#FFC0FFF1" BorderBrush="#FFC0FFF1" Foreground="Black" Click="Smena_Click"/>
                     <Button x:Name="Zapis" Content="Запись" Height="28" Background="#FFC0FFF1" BorderBrush="#FFC0FFF1" Foreground="Black"/>
                 </StackPanel>
             </Expander>
@@ -32,6 +32,9 @@
             <Label x:Name="WTime" Content="0:0" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="127" Width="216" FontSize="90"/>
             <Button x:Name="Pause" Content="Pause" HorizontalAlignment="Left" Margin="113,325,0,0" VerticalAlignment="Top" Width="86" Height="37" Click="Pause_Click" RenderTransformOrigin="0.5,0.486"/>
             <Label x:Name="PTime" Content="0:0" HorizontalAlignment="Left" Margin="296,10,0,0" VerticalAlignment="Top" Height="127" Width="216" FontSize="90"/>
+        </Grid>
+        <Grid HorizontalAlignment="Left" Height="372" Margin="102,0,0,0" VerticalAlignment="Top" Width="687">
+            <ListView x:Name="LstVw" />
         </Grid>
     </Grid>
 </Window>

@@ -35,6 +35,8 @@ namespace dip
                 SqlCommand cmd = new SqlCommand("SELECT Role FROM [User] WHERE Login='" + Log.Text + "' AND Psswrd='" + Password.Password + "'", con);
                 con.Open();
                 string x = cmd.ExecuteScalar().ToString();
+                User.Login = Log.Text;
+                User.pass = Password.Password.ToString();
                 if (x.Trim() == "Администратор")
                 {
 
@@ -50,8 +52,6 @@ namespace dip
                     f.ShowDialog();
                     this.Close();
                 }
-                User.Login = Log.Text;
-                User.pass = Password.Password.ToString();
                 con.Close();
             }
 

@@ -23,23 +23,54 @@ namespace dip
     {
         DispatcherTimer timer = new DispatcherTimer();
         DispatcherTimer timer2 = new DispatcherTimer();
+        DispatcherTimer timer3 = new DispatcherTimer();
         int s = 1;
         int m = 0;
         int H = 0;
         int s2 = 1;
         int m2 = 0;
         int H2 = 0;
+        string rabT = "";
+        string pasT = "";
+        string t = "";
+        int s3 = 1;
         public DispatcherTimerSample()
             {
                 InitializeComponent();
 
                 timer.Interval = TimeSpan.FromSeconds(1);
                 timer2.Interval = TimeSpan.FromSeconds(1);
+                timer3.Interval = TimeSpan.FromSeconds(1);
                 timer2.Tick += Timer_Tick2;
                 timer.Tick += Timer_Tick;
+                timer3.Tick += Time_TickM;
 
+
+        }
+            void Time_TickM(object sender, EventArgs e)
+            {
+                var windowPosition = Mouse.GetPosition(this);
+                var screenPosition = this.PointToScreen(windowPosition);
+                t = screenPosition.ToString();
+                
+            if (t == screenPosition.ToString())
+            {
+                s3++;
+                if (s3 >= 60)
+                {
+                    timer2.Start();
+                    timer.Stop();
+                    
+                }
             }
-
+            else
+            {
+                if (timer.IsEnabled)
+                {
+                    timer2.Stop();
+                }
+            }
+            }
             void Timer_Tick(object sender, EventArgs e)
             {
                 WTime.Content = H + ":" + m + ":" +s;
@@ -63,6 +94,7 @@ namespace dip
                     s = 0;
                     H++;
                 }
+                rabT = WTime.Content.ToString();
             }
         void Timer_Tick2(object sender, EventArgs e)
         {
@@ -87,6 +119,7 @@ namespace dip
                 s2 = 0;
                 H2++;
             }
+            pasT = PTime.Content.ToString();
         }
         private void Exp1_Collapsed(object sender, RoutedEventArgs e)
         {
@@ -128,12 +161,30 @@ namespace dip
         {
             timer.Start();
             timer2.Stop();
+            timer3.Start();
         }
 
         private void Pause_Click(object sender, RoutedEventArgs e)
         {
             timer.Stop();
             timer2.Start();
+        }
+
+        private void Smena_Click(object sender, RoutedEventArgs e)
+        {
+            Start.Visibility = Visibility.Collapsed;
+            Pause.Visibility = Visibility.Collapsed;
+            WTime.Visibility = Visibility.Collapsed;
+            PTime.Visibility = Visibility.Collapsed;
+
+        }
+
+        private void Prof_Click(object sender, RoutedEventArgs e)
+        {
+            Start.Visibility = Visibility.Visible;
+            Pause.Visibility = Visibility.Visible;
+            WTime.Visibility = Visibility.Visible;
+            PTime.Visibility = Visibility.Visible;
         }
     }
 }
